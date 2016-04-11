@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="dcarrot2.com.scarnedice.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/scoreView"/>
+
+    <ImageView
+        android:layout_width="125dp"
+        android:paddingRight="16dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scoreView"
+        android:layout_alignParentRight="true"
+        android:id="@+id/diceView"
+        android:src="@drawable/dice1"/>
+    <Button
+        android:text="Roll"
+        android:id="@+id/rollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/diceView"
+        android:layout_alignParentLeft="true"
+        android:onClick="clickHandler"/>
+    <Button
+        android:text="Hold"
+        android:id="@+id/holdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/diceView"
+        android:layout_centerHorizontal="true"
+        android:onClick="clickHandler"/>
+    <Button
+        android:text="Reset"
+        android:id="@+id/resetView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/diceView"
+        android:layout_alignParentRight="true"
+        android:onClick="clickHandler"/>
+</RelativeLayout>
