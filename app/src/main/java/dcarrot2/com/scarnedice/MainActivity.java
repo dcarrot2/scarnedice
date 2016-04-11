@@ -39,10 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        userOverallScore = 0;
-        compOverallScore = 0;
-        userTurnScore = 0;
-        compOverallScore = 0;
+        resetScore();
         startMessage = "Your score: %d Computer score: %d";
         TextView score = (TextView) findViewById(R.id.scoreView);
         score.setText(String.format(startMessage, 0, 0));
@@ -111,6 +108,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void resetScore() {
+        userOverallScore = 0;
+        userTurnScore = 0;
+        compOverallScore = 0;
+        compTurnScore = 0;
+    }
+
     private void computerTurn() {
         rollButton = (Button) findViewById(R.id.rollView);
         holdButton = (Button) findViewById(R.id.holdView);
@@ -149,10 +153,7 @@ public class MainActivity extends AppCompatActivity {
     private void resetGame() {
         TextView score = (TextView) findViewById(R.id.scoreView);
         startMessage = "Your score: %d Computer score: %d";
-        userOverallScore = 0;
-        userTurnScore = 0;
-        compOverallScore = 0;
-        compTurnScore = 0;
+        resetScore();
         score.setText(String.format(startMessage, 0, 0));
     }
 
